@@ -1,4 +1,4 @@
-# 🚀 Project Name
+# 🚀 Generative AI Email Classification and OCR Solution
 
 ## 📌 Table of Contents
 - [Introduction](#introduction)
