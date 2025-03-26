@@ -16,8 +16,7 @@
 ## 🎯 Introduction
 Commercial Bank Lending service teams receive a high volume of servicing requests via email. These emails often contain diverse requests and attachments, which are ingested into the loan servicing platform to create service requests (SRs). These SRs then go through workflow processing.
 
-The challenge is to automate email classification and data extraction using Generative AI (LLMs), improving efficiency, accuracy, and turnaround time while minimizing manual intervention. The solution should also enable skill-based routing of service requests to the appropriate teams.
-
+The challenge is to automate email classification and data extraction using Generative AI (LLMs), improving efficiency, accuracy, and turnaround time while minimizing manual intervention. 
 ## 🎥 Demo
 🔗 [Live Demo](#) (if applicable)  
 📹 [Video Demo](#) (if applicable)  
