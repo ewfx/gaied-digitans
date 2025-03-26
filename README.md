@@ -25,15 +25,17 @@ The challenge is to automate email classification and data extraction using Gene
 ![Screenshot 2025-03-26 at 3 35 21 PM](https://github.com/user-attachments/assets/3e0da19b-ad98-4dc3-b3c5-0235326b27a9)
 
 
-   Single Email/pdf File Classification
+1. Single Email/pdf File Classification
 
 ![Screenshot 2025-03-26 at 5 49 09 PM](https://github.com/user-attachments/assets/12fbe4b9-de96-41e7-9cb4-02f71dd46aa9)
 
 
 
-   Bulk File/Folder Classification
+2. Bulk File/Folder Classification
 
 ![Screenshot 2025-03-26 at 3 39 02 PM](https://github.com/user-attachments/assets/9e4e70ce-2fa3-4be8-98ed-a2ac749b8905)
+
+
 ![Screenshot 2025-03-26 at 5 51 11 PM](https://github.com/user-attachments/assets/fb724cc6-b89e-4d44-86ef-e5ad3b4c15eb)
 
 
@@ -153,7 +155,7 @@ Manual email triage is time-consuming, inefficient, and prone to errors. Automat
 - 🔹 Frontend: React, BootStrap, HTML, CSS
 - 🔹 Backend: Python Fast API 
 - 🔹 Database: In memory, Chroma DB
-- 🔹 AI & NLP : Mistral-7B , scikit-learn
+- 🔹 AI & NLP : Mistral-7B
 - 🔹 Document Processing  : eml-parser, paddleocr ,pdfplumber,python-docx
 - 
 
