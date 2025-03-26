@@ -1,13 +1,17 @@
 import re
 import json
 import requests
+import os
+from dotenv import load_dotenv
+
 
 # Load the field extraction configuration
 with open("config/field_extraction_config.json", "r") as file:
     field_extraction_config = json.load(file)
+load_dotenv()
 
 # Hugging Face API Configuration
-HUGGINGFACE_API_KEY = "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"
+HUGGINGFACE_API_KEY = os.getenv("HUGGINGFACE_API_KEY")
 API_URL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2"
 HEADERS = {
     "Authorization": f"Bearer {HUGGINGFACE_API_KEY}",
