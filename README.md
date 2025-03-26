@@ -38,17 +38,35 @@ Describe the major technical or non-technical challenges your team encountered.
 ## 🏃 How to Run
 1. Clone the repository  
    ```sh
-   git clone https://github.com/your-repo.git
+ git clone https://github.com/ewfx/gaied-digitans.git
+ cd gaied-digitans
    ```
-2. Install dependencies  
+2. Navigate to src folder
    ```sh
-   npm install  # or pip install -r requirements.txt (for Python)
+   cd code/src
    ```
-3. Run the project  
+3.  Create a Virtual Environment
+Set up a virtual environment to isolate dependencies:
+```sh
+python3 -m venv venv
+source venv/bin/activate  # On macOS/Linux
+venv\Scripts\activate     # On Windows
+```
+4. Install dependencies  
    ```sh
-   npm start  # or python app.py
+   pip install -r requirements.txt (for Python)
    ```
-
+5. Run the project
+   Start the FastAPI application using uvicorn:
+   ```sh
+    uvicorn main:app --reload
+   ```
+6. Test the Application
+You can test the application by navigating to the FastAPI interactive docs at:
+```sh
+   http://127.0.0.1:8000/docs - Swagger Docs
+   http://127.0.0.1:8000  -- UI Testing
+```
 ## 🏗️ Tech Stack
 - 🔹 Frontend: React / Vue / Angular
 - 🔹 Backend: Node.js / FastAPI / Django
