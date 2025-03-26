@@ -120,9 +120,11 @@ Manual email triage is time-consuming, inefficient, and prone to errors. Automat
     git clone https://github.com/ewfx/gaied-digitans.git
     cd gaied-digitans
      ```
-2. Update Hugging Face api key in env file. At this moment, I added acces key of mine. Pls generate one by following below instructions
+2. Update Hugging Face api key as below. At this moment, I added acces key of mine. Pls generate one by following below instructions
    ```sh
    https://huggingface.co/docs/hub/en/security-tokens
+   export HUGGINGFACE_API_KEY=your_hugging_face_api_key_here #macOS
+   set HUGGINGFACE_API_KEY=your_hugging_face_api_key_here  # Windows OS
      ```
   
 3. Navigate to src folder
