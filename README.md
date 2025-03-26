@@ -22,8 +22,15 @@ The challenge is to automate email classification and data extraction using Gene
 📹 [Video Demo](#) (if applicable)  
 🖼️ Screenshots:
 
+![Home Page](<Screenshot 2025-03-26 at 3.35.21 PM.png>) 
 
-![Screenshot 1](link-to-image)
+Single Email/pdf File Classification
+
+![Single File Upload](<Screenshot 2025-03-26 at 3.35.51 PM.png>) 
+
+Bulk File/Folder Classification
+
+![Folder Upload](<Screenshot 2025-03-26 at 3.39.02 PM.png>)
 
 ## 💡 Inspiration
 Manual email triage is time-consuming, inefficient, and prone to errors. Automating this process with AI can drastically improve accuracy and reduce turnaround time.
