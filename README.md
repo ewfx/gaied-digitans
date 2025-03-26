@@ -46,22 +46,19 @@ Manual email triage is time-consuming, inefficient, and prone to errors. Automat
 
 - Handles multi-intent emails, determining the primary request type.
 
-- mplements priority-based extraction, prioritizing email content over attachments.
+- Implements priority-based extraction, prioritizing email content over attachments.
 
 - Detects duplicate emails, preventing redundant service requests.
 
 ## 🛠️ How We Built It
 
-- LLMs (Mistral-7B, GPT, LLaMA, Gemini) for request classification.
-
-- DistilBERT & PaddleOCR for structured field extraction and OCR.
+- LLMs (Mistral-7B) for request classification & field extraction dynamically after considering rules, request types supplied
 
 - FastAPI & React for backend and frontend development.
 
 - Scikit-learn, Pandas, LangChain for data processing.
 
-- In Memory Database for duplicate detection
-
+- Duplication detection uses **hash-based exact matching** and **similarity-based soft matching**. 
 
 
 ## 🚧 Challenges We Faced
@@ -110,7 +107,7 @@ Manual email triage is time-consuming, inefficient, and prone to errors. Automat
 - 🔹 Frontend: React, BootStrap, HTML, CSS
 - 🔹 Backend: Python Fast API 
 - 🔹 Database: In memory, Chroma DB
-- 🔹 AI & NLP : Mistral-7B by Hugging Face, scikit-learn , fuzzywuzzy
+- 🔹 AI & NLP : Mistral-7B , scikit-learn
 - 🔹 Document Processing  : eml-parser, paddleocr ,pdfplumber,python-docx
 - 
 
