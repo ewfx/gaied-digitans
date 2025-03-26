@@ -14,26 +14,56 @@
 ---
 
 ## 🎯 Introduction
-A brief overview of your project and its purpose. Mention which problem statement are your attempting to solve. Keep it concise and engaging.
+Commercial Bank Lending service teams receive a high volume of servicing requests via email. These emails often contain diverse requests and attachments, which are ingested into the loan servicing platform to create service requests (SRs). These SRs then go through workflow processing.
+
+The challenge is to automate email classification and data extraction using Generative AI (LLMs), improving efficiency, accuracy, and turnaround time while minimizing manual intervention. The solution should also enable skill-based routing of service requests to the appropriate teams.
 
 ## 🎥 Demo
 🔗 [Live Demo](#) (if applicable)  
 📹 [Video Demo](#) (if applicable)  
 🖼️ Screenshots:
 
+
 ![Screenshot 1](link-to-image)
 
 ## 💡 Inspiration
-What inspired you to create this project? Describe the problem you're solving.
+Manual email triage is time-consuming, inefficient, and prone to errors. Automating this process with AI can drastically improve accuracy and reduce turnaround time.
 
 ## ⚙️ What It Does
-Explain the key features and functionalities of your project.
+
+Classifies emails into predefined request types and sub-request types based on sender intent.
+
+Extracts contextual data like deal name, amount, expiration date, etc.
+
+Handles multi-intent emails, determining the primary request type.
+
+Implements priority-based extraction, prioritizing email content over attachments.
+
+Detects duplicate emails, preventing redundant service requests.
 
 ## 🛠️ How We Built It
-Briefly outline the technologies, frameworks, and tools used in development.
+
+LLMs (Mistral-7B, GPT, LLaMA, Gemini) for request classification.
+
+DistilBERT & PaddleOCR for structured field extraction and OCR.
+
+FastAPI & React for backend and frontend development.
+
+Scikit-learn, Pandas, LangChain for data processing.
+
+In Memory Database for duplicate detection
+
+
 
 ## 🚧 Challenges We Faced
-Describe the major technical or non-technical challenges your team encountered.
+
+Handling multi-intent emails accurately.
+
+Ensuring scalability for large datasets.
+
+Fine-tuning confidence scoring for classification accuracy.
+
+Optimizing processing time for real-time response.
 
 ## 🏃 How to Run
 1. Clone the repository  
@@ -68,11 +98,11 @@ Describe the major technical or non-technical challenges your team encountered.
    http://127.0.0.1:8000  -- UI Testing
    ```
 ## 🏗️ Tech Stack
-- 🔹 Frontend: React / Vue / Angular
-- 🔹 Backend: Node.js / FastAPI / Django
-- 🔹 Database: PostgreSQL / Firebase
-- 🔹 Other: OpenAI API / Twilio / Stripe
+- 🔹 Frontend: React, BootStrap, HTML, CSS
+- 🔹 Backend: Python Fast API 
+- 🔹 Database: In memory
+- 
 
 ## 👥 Team
-- **Your Name** - [GitHub](#) | [LinkedIn](#)
+- **Your Name** - [[GitHub](#) ](https://github.com/tejamvreddy)| [LinkedIn](#)
 - **Teammate 2** - [GitHub](#) | [LinkedIn](#)
