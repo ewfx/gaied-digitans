@@ -7,7 +7,7 @@ with open("config/field_extraction_config.json", "r") as file:
     field_extraction_config = json.load(file)
 
 # Hugging Face API Configuration
-HUGGINGFACE_API_KEY = "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"
+HUGGINGFACE_API_KEY = "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"
 API_URL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2"
 HEADERS = {
     "Authorization": f"Bearer {HUGGINGFACE_API_KEY}",

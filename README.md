@@ -21,7 +21,15 @@ A brief overview of your project and its purpose. Mention which problem statemen
 📹 [Video Demo](#) (if applicable)  
 🖼️ Screenshots:
 
-![Screenshot 1](link-to-image)
+![Home Page](<Screenshot 2025-03-26 at 3.35.21 PM.png>) 
+
+Single Email/pdf File Classification
+
+![Single File Upload](<Screenshot 2025-03-26 at 3.35.51 PM.png>) 
+
+Bulk File/Folder Classification
+
+![Folder Upload](<Screenshot 2025-03-26 at 3.39.02 PM.png>)
 
 ## 💡 Inspiration
 What inspired you to create this project? Describe the problem you're solving.

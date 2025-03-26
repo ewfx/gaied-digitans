@@ -7,7 +7,7 @@ from services.field_extractor import extract_fields
 from services.duplicate_checker import is_duplicate
 
 # Load Hugging Face API Key from Environment Variable
-HUGGINGFACE_API_KEY = "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"
+HUGGINGFACE_API_KEY = "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"
 API_URL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2"
 
 HEADERS = {
@@ -78,111 +78,121 @@ def extract_classification_from_response(response_text):
 
 
 def classify_and_extract(email_text: str, attachment_text: str = ""):
-    """
-    Accurately extracts, interprets the context, and categorizes emails into predefined request types
-    and sub-request types based on the sender's intent along with reasoning.
-    """
-    valid_request_types = get_valid_request_types()
-
-    # Construct the prompt for classification
-    classification_prompt = f"""
-    You are an AI assistant for commercial loans bank servicing team automation. 
-    Your task is to classify the given email into a predefined request type and sub-request type.
-
-    Email Content:
-    {email_text}
-
-    Attachments Content:
-    {attachment_text}
-
-    Based on the above content, determine the correct 'Request Type' and 'Sub Request Type' from this predefined list:
-    {json.dumps(valid_request_types, indent=2)}
-
-    Output Format:
-    Provide the output strictly in the following JSON format:
-    {{
-        "request_type": "string",
-        "sub_request_type": "string",
-        "confidence_score": integer,
-        "reasoning": "string"
-    }}
-
-    Do not include any additional text, explanation, or formatting outside the JSON block.
-    """
-
     try:
-        # Send the request to the Hugging Face API
-        response = requests.post(API_URL, headers=HEADERS, json={"inputs": classification_prompt}, timeout=30)
+        valid_request_types = get_valid_request_types()
 
-        # Handle HTTP errors
-        if response.status_code != 200:
-            return {
-                "error": "API request failed",
-                "status_code": response.status_code,
-                "response": response.text
-            }
+        # Construct the prompt for classification
+        classification_prompt = f"""
+        You are an AI assistant for commercial loans bank servicing team automation. 
+        Your task is to classify the given email into a predefined request type and sub-request type.
 
-        # Parse JSON response from Hugging Face API
-        result = response.json()
+        Email Content:
+        {email_text}
 
-        print("response from model::", result)
+        Attachments Content:
+        {attachment_text}
 
-        # Ensure the response contains 'generated_text'
-        if isinstance(result, list) and len(result) > 0 and "generated_text" in result[0]:
-            generated_text = result[0]["generated_text"]
-            print("Generated text:", generated_text)
-            try:
-                classification_result = extract_classification_from_response(generated_text)
+        Based on the above content, determine the correct 'Request Type' and 'Sub Request Type' from this predefined list:
+        {json.dumps(valid_request_types, indent=2)}
 
-                # Handle case where classification_result is a list
-                if isinstance(classification_result, list):
-                    # Use the first valid result from the list
-                    classification_result = classification_result[0]
+        Output Format:
+        Provide the output strictly in the following JSON format:
+        {{
+            "request_type": "string",
+            "sub_request_type": "string",
+            "confidence_score": integer,
+            "reasoning": "string"
+        }}
 
-            except ValueError as e:
+        Do not include any additional text, explanation, or formatting outside the JSON block.
+        """
+
+        try:
+            # Send the request to the Hugging Face API
+            response = requests.post(API_URL, headers=HEADERS, json={"inputs": classification_prompt}, timeout=30)
+
+            # Handle HTTP errors
+            if response.status_code != 200:
                 return {
-                    "error": str(e),
-                    "raw_response": generated_text
+                    "error": "API request failed",
+                    "status_code": response.status_code,
+                    "response": response.text
                 }
-        else:
-            return {
-                "error": "Unexpected response format from API",
-                "response": result
+
+            # Parse JSON response from Hugging Face API
+            result = response.json()
+
+            print("response from model::", result)
+
+            # Ensure the response contains 'generated_text'
+            if isinstance(result, list) and len(result) > 0 and "generated_text" in result[0]:
+                generated_text = result[0]["generated_text"]
+                print("Generated text:", generated_text)
+                try:
+                    classification_result = extract_classification_from_response(generated_text)
+
+                    # Handle case where classification_result is a list
+                    if isinstance(classification_result, list):
+                        # Use the first valid result from the list
+                        classification_result = classification_result[0]
+
+                except ValueError as e:
+                    return {
+                        "error": str(e),
+                        "raw_response": generated_text
+                    }
+            else:
+                return {
+                    "error": "Unexpected response format from API",
+                    "response": result
+                }
+
+            # Get the classified request type and sub-request type
+            request_type = classification_result.get("request_type", None)
+            sub_request_type = classification_result.get("sub_request_type", None)
+            confidence_score = classification_result.get("confidence_score", None)
+            reasoning = classification_result.get("reasoning", None)
+
+            print("Request Type:", request_type)
+            print("Sub Request Type:", sub_request_type)
+            print("Confidence Score:", confidence_score)
+            print("Reasoning:", reasoning)
+
+            # Extract structured fields based on request type and sub-request type
+            extracted_fields = {}
+            if request_type and sub_request_type:
+                extracted_fields = extract_fields(email_text, request_type, sub_request_type)
+
+            print("Extracted Fields:", extracted_fields)
+
+            # Final response structure
+            final_result = {
+                "classification": {
+                    "request_type": request_type,
+                    "sub_request_type": sub_request_type,
+                    "confidence_score": confidence_score,
+                    "reasoning": reasoning
+                },
+                "extracted_fields": extracted_fields
             }
 
-        # Get the classified request type and sub-request type
-        request_type = classification_result.get("request_type", None)
-        sub_request_type = classification_result.get("sub_request_type", None)
-        confidence_score = classification_result.get("confidence_score", None)
-        reasoning = classification_result.get("reasoning", None)
+            return final_result
 
-        print("Request Type:", request_type)
-        print("Sub Request Type:", sub_request_type)
-        print("Confidence Score:", confidence_score)
-        print("Reasoning:", reasoning)
+        except requests.exceptions.RequestException as e:
+            return {"error": "Request to Hugging Face API failed", "details": str(e)}
 
-        # Extract structured fields based on request type and sub-request type
-        extracted_fields = {}
-        if request_type and sub_request_type:
-            extracted_fields = extract_fields(email_text, request_type, sub_request_type)
-
-        print("Extracted Fields:", extracted_fields)
-
-        # Final response structure
-        final_result = {
-            "classification": {
-                "request_type": request_type,
-                "sub_request_type": sub_request_type,
-                "confidence_score": confidence_score,
-                "reasoning": reasoning
-            },
-            "extracted_fields": extracted_fields
-        }
-
-        return final_result
-
-    except requests.exceptions.RequestException as e:
-        return {"error": "Request to Hugging Face API failed", "details": str(e)}
+        except Exception as e:
+            return {"error": "Unexpected error occurred", "details": str(e)}
 
     except Exception as e:
-        return {"error": "Unexpected error occurred", "details": str(e)}
+        print(f"Error in classify_and_extract: {str(e)}", flush=True)
+        return {
+            "error": f"API request failed: {str(e)}",
+            "raw_response": None
+        }
+
+if __name__ == "__main__":
+    email_text = "Sample email content"
+    attachment_text = "Sample attachment content"
+    result = classify_and_extract(email_text, attachment_text)
+    print("Result:", result)
