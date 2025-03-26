@@ -14,7 +14,8 @@
 ---
 
 ## 🎯 Introduction
-Commercial Bank Lending service teams receive a high volume of servicing requests via email. These emails often contain diverse requests and attachments, which are ingested into the loan servicing platform to create service requests (SRs). These SRs then go through workflow processing.
+Commercial Bank Lending service teams receive a high volume of servicing requests via email. These emails often contain diverse requests and attachments, which are ingested into the loan servicing platform t![Screenshot 2025-03-26 at 5 49 09 PM](https://github.com/user-attachments/assets/f7cf6eb0-1f2c-4888-b75f-8885a445bfcd)
+o create service requests (SRs). These SRs then go through workflow processing.
 
 The challenge is to automate email classification and data extraction using Generative AI (LLMs), improving efficiency, accuracy, and turnaround time while minimizing manual intervention. 
 ## 🎥 Demo
@@ -27,12 +28,15 @@ The challenge is to automate email classification and data extraction using Gene
 
    Single Email/pdf File Classification
 
-![Screenshot 2025-03-26 at 3 35 51 PM](https://github.com/user-attachments/assets/6385a10b-bea8-4eb3-a0de-c3865a43eeaa)
+![Screenshot 2025-03-26 at 5 49 09 PM](https://github.com/user-attachments/assets/12fbe4b9-de96-41e7-9cb4-02f71dd46aa9)
+
 
 
    Bulk File/Folder Classification
 
 ![Screenshot 2025-03-26 at 3 39 02 PM](https://github.com/user-attachments/assets/9e4e70ce-2fa3-4be8-98ed-a2ac749b8905)
+![Screenshot 2025-03-26 at 5 51 11 PM](https://github.com/user-attachments/assets/fb724cc6-b89e-4d44-86ef-e5ad3b4c15eb)
+
 
 
 ## 💡 Inspiration
