@@ -31,39 +31,39 @@ Manual email triage is time-consuming, inefficient, and prone to errors. Automat
 
 ## ⚙️ What It Does
 
-Classifies emails into predefined request types and sub-request types based on sender intent.
+- 🔹Classifies emails into predefined request types and sub-request types based on sender intent.
 
-Extracts contextual data like deal name, amount, expiration date, etc.
+- 🔹Extracts contextual data like deal name, amount, expiration date, etc.
 
-Handles multi-intent emails, determining the primary request type.
+- 🔹Handles multi-intent emails, determining the primary request type.
 
-Implements priority-based extraction, prioritizing email content over attachments.
+- 🔹Implements priority-based extraction, prioritizing email content over attachments.
 
-Detects duplicate emails, preventing redundant service requests.
+- 🔹Detects duplicate emails, preventing redundant service requests.
 
 ## 🛠️ How We Built It
 
-LLMs (Mistral-7B, GPT, LLaMA, Gemini) for request classification.
+- 🔹LLMs (Mistral-7B, GPT, LLaMA, Gemini) for request classification.
 
-DistilBERT & PaddleOCR for structured field extraction and OCR.
+- 🔹DistilBERT & PaddleOCR for structured field extraction and OCR.
 
-FastAPI & React for backend and frontend development.
+- 🔹FastAPI & React for backend and frontend development.
 
-Scikit-learn, Pandas, LangChain for data processing.
+- 🔹Scikit-learn, Pandas, LangChain for data processing.
 
-In Memory Database for duplicate detection
+- 🔹In Memory Database for duplicate detection
 
 
 
 ## 🚧 Challenges We Faced
 
-Handling multi-intent emails accurately.
+- 🔹Handling multi-intent emails accurately.
 
-Ensuring scalability for large datasets.
+- 🔹Ensuring scalability for large datasets.
 
-Fine-tuning confidence scoring for classification accuracy.
+- 🔹Fine-tuning confidence scoring for classification accuracy.
 
-Optimizing processing time for real-time response.
+- 🔹Optimizing processing time for real-time response.
 
 ## 🏃 How to Run
 1. Clone the repository  
