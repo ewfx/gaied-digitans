@@ -5,9 +5,12 @@ import re
 from utils.config_loader import get_valid_request_types
 from services.field_extractor import extract_fields
 from services.duplicate_checker import is_duplicate
+from dotenv import load_dotenv
 
+
+load_dotenv()
 # Load Hugging Face API Key from Environment Variable
-HUGGINGFACE_API_KEY = "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"
+HUGGINGFACE_API_KEY = os.getenv("HUGGINGFACE_API_KEY")
 API_URL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2"
 
 HEADERS = {
