@@ -80,27 +80,32 @@ Manual email triage is time-consuming, inefficient, and prone to errors. Automat
     git clone https://github.com/ewfx/gaied-digitans.git
     cd gaied-digitans
      ```
-2. Navigate to src folder
+2. Update Hugging Face api key in env file. At this moment, I added acces key of mine. Pls generate one by following below instructions
+   ```sh
+   https://huggingface.co/docs/hub/en/security-tokens
+     ```
+  
+3. Navigate to src folder
    ```sh
    cd code/src
    ```
-3. Create a Virtual Environment
+4. Create a Virtual Environment
    Set up a virtual environment to isolate dependencies:
    ```sh
    python3 -m venv venv
    source venv/bin/activate  # On macOS/Linux
    venv\Scripts\activate     # On Windows
    ```
-4. Install dependencies  
+5. Install dependencies  
    ```sh
    pip install -r requirements.txt (for Python)
    ```
-5. Run the project
+6. Run the project
    Start the FastAPI application using uvicorn:
    ```sh
     uvicorn main:app --reload
    ```
-6. Test the Application
+7. Test the Application
    You can test the application by navigating to the FastAPI interactive docs at:
    ```sh
    http://127.0.0.1:8000/docs - Swagger Docs
