@@ -1,0 +1,23 @@
+Content-Type: multipart/mixed; boundary="===============4672003929855252907=="
+MIME-Version: 1.0
+From: clientservices@company.com
+To: support@bank.com
+Subject: Ongoing Fee Payment Request
+
+--===============4672003929855252907==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Good day,
+
+Kindly process the payment of ongoing fees for deal ID D98765. The total amount is $2,500. See the attached invoice.
+--===============4672003929855252907==
+Content-Type: application/octet-stream
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename=invoice.pdf
+
+RHVtbXkgYXR0YWNobWVudCBjb250ZW50
+
+--===============4672003929855252907==--

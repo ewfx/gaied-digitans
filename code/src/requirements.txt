@@ -1,0 +1,46 @@
+# FastAPI and ASGI Server
+fastapi                 # Web framework for building APIs
+uvicorn                 # ASGI server to run FastAPI apps
+requests                # HTTP requests to interact with external APIs
+
+# Email Parsing and Attachment Handling
+python-magic            # Detect file types based on content
+eml-parser              # Extract metadata and text from .eml email files
+
+# Large Language Model (LLM) API Integration
+openai                  # OpenAI API client for LLM-based classification
+
+# OCR and Document Processing
+paddleocr               # OCR tool for extracting text from images and PDFs
+pdfplumber              # Extract text from PDFs
+python-docx             # Process and extract text from .docx files
+pytesseract             # OCR for image-based text extraction
+pdf2image               # Convert PDF pages into images for OCR
+Pillow                  # Image processing library
+
+# Duplicate Detection and Text Similarity
+scikit-learn            # Machine learning tools for duplicate detection
+#numpy                   # Numerical computations (used in ML models)
+fuzzywuzzy              # String similarity matching for duplicate detection
+python-Levenshtein      # Fast Levenshtein distance calculations
+
+# JSON and Configuration Handling
+pydantic                # Data validation and settings management                                                                              
+pyyaml                  # Handle configuration files in YAML format
+
+# Development and Testing
+pytest                  # Unit testing framework
+httpx                   # Async HTTP client for testing FastAPI endpoints
+aiofiles                # Async file handling for FastAPI
+
+# Miscellaneous Utilities
+filetype                # Detect file types for attachments
+python-multipart        # File uploads in FastAPI
+chardet                 # Character encoding detection
+
+PyPDF2                 # Extract text from PDFs
+docx                 # Extract text from .docx files
+
+
+jinja2               # Template engine for FastAPI
+fastapi[all]        # FastAPI with all optional dependencies

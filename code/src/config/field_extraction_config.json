@@ -1,0 +1,62 @@
+{
+    "Adjustment - Fee Adjustment": ["deal_name", "adjustment_amount", "effective_date", "lender_name", "reason"],
+    "Adjustment - Principal Adjustment": ["deal_name", "principal_amount", "effective_date", "lender_name"],
+    "Adjustment - Interest Adjustment": ["deal_name", "interest_amount", "effective_date", "lender_name"],
+
+    "AU Transfer - Intra-Bank Transfer": ["transfer_id", "source_account_number", "destination_account_number", "transfer_amount", "transfer_date"],
+    "AU Transfer - Inter-Bank Transfer": ["transfer_id", "source_bank", "destination_bank", "transfer_amount", "transfer_date"],
+    "AU Transfer - Scheduled Transfer": ["transfer_id", "source_account_number", "destination_account_number", "transfer_amount", "scheduled_date"],
+
+    "Closing Notice - Reallocation Fees": ["deal_name", "fee_type", "reallocation_amount", "effective_date", "lender_name"],
+    "Closing Notice - Amendment Fees": ["deal_name", "fee_type", "amendment_amount", "effective_date", "lender_name"],
+    "Closing Notice - Reallocation Principal": ["deal_name", "principal_amount", "effective_date", "lender_name"],
+
+    "Commitment Change - Cashless Roll": ["deal_name", "lender_name", "commitment_type", "amount_rolled", "effective_date"],
+    "Commitment Change - Decrease": ["deal_name", "lender_name", "commitment_decrease", "new_commitment_amount", "effective_date"],
+    "Commitment Change - Increase": ["deal_name", "lender_name", "commitment_increase", "new_commitment_amount", "effective_date"],
+
+    "Fee Payment - Ongoing Fee": ["fee_type", "due_date", "amount_paid", "outstanding_amount", "payment_date", "reference_number"],
+    "Fee Payment - Letter of Credit Fee": ["fee_type", "amount_paid", "payment_date", "credit_reference_number"],
+
+    "Money Movement - Inbound - Principal": ["amount", "currency", "transaction_id", "sender_bank", "receiver_bank", "transfer_date"],
+    "Money Movement - Inbound - Interest": ["amount", "currency", "transaction_id", "sender_bank", "receiver_bank", "transfer_date"],
+    "Money Movement - Inbound - Principal + Interest": ["total_amount", "currency", "transaction_id", "sender_bank", "receiver_bank", "transfer_date"],
+    "Money Movement - Outbound - Timebound": ["amount", "currency", "transaction_id", "receiver_bank", "transfer_date", "time_constraint"],
+    "Money Movement - Outbound - Foreign Currency": ["amount", "currency", "exchange_rate", "transaction_id", "receiver_bank", "transfer_date"],
+    "Money Movement - Outbound - Principal": ["amount", "currency", "transaction_id", "receiver_bank", "transfer_date"],
+    "Money Movement - Repayment - Payment Confirmation": ["amount", "currency", "transaction_id", "receiver_bank", "transfer_date"],
+
+    "Loan Origination - Application Submission": ["borrower_name", "loan_application_id", "requested_amount", "submission_date"],
+    "Loan Origination - Documentation Provision": ["borrower_name", "document_type", "submission_date"],
+    "Loan Origination - Credit Evaluation": ["borrower_name", "credit_score", "evaluation_date"],
+    "Loan Origination - Approval Notification": ["borrower_name", "loan_application_id", "approval_status", "approval_date"],
+
+    "Loan Disbursement - Fund Transfer": ["fund_transfer_id", "disbursement_amount", "disbursement_date", "beneficiary_account"],
+    "Loan Disbursement - Disbursement Schedule": ["loan_id", "disbursement_plan", "schedule_dates"],
+    "Loan Disbursement - Disbursement Confirmation": ["loan_id", "confirmation_date", "amount_disbursed"],
+
+    "Loan Repayment - Repayment Schedule Setup": ["loan_id", "installment_amount", "payment_due_date", "repayment_term"],
+    "Loan Repayment - Early Repayment": ["loan_id", "remaining_balance", "early_repayment_date"],
+    "Loan Repayment - Payment Rescheduling": ["loan_id", "new_payment_schedule", "reschedule_reason"],
+    "Loan Repayment - Payment Confirmation": ["deal_name", "amount"],
+    "Loan Repayment - Repayment Confirmation": ["deal_name", "amount", "principal_amount"],
+
+    "Loan Information - Balance Inquiry": ["account_number", "current_balance", "last_transaction_date"],
+    "Loan Information - Amortization Schedule": ["loan_id", "remaining_payments", "monthly_installment"],
+    "Loan Information - Interest Statement": ["loan_id", "interest_rate", "accrued_interest", "statement_period"],
+    "Loan Information - Tax Certificate": ["borrower_name", "loan_id", "tax_year", "interest_paid"],
+
+    "Loan Closure - Closure Statement": ["loan_id", "closure_date", "final_payment_amount"],
+    "Loan Closure - No Dues Certificate": ["loan_id", "certificate_issue_date"],
+    "Loan Closure - Security Release": ["loan_id", "release_date", "security_details"],
+
+    "Loan Service - Statement Requests": ["account_number", "statement_period", "delivery_preference"],
+    "Loan Service - Document Retrieval": ["document_type", "request_date", "delivery_preference"],
+    "Loan Service - Account Linking": ["primary_account_number", "linked_account_number", "linking_type"],
+
+    "Loan Grievance - Dispute Resolution": ["dispute_id", "dispute_description", "resolution_status", "resolution_date"],
+    "Loan Grievance - Complaint Registration": ["complaint_id", "complaint_category", "complaint_details"],
+    "Loan Grievance - Feedback Submission": ["feedback_id", "feedback_category", "feedback_text"],
+
+    "Account Inquiry - Balance Check": ["account_number", "balance"]
+}

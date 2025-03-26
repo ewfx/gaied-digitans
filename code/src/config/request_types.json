@@ -1,0 +1,44 @@
+{
+    "Adjustment": {
+        "sub_types": ["Fee Adjustment", "Principal Adjustment", "Interest Adjustment"]
+    },
+    "AU Transfer": {
+        "sub_types": ["Intra-Bank Transfer", "Inter-Bank Transfer", "Scheduled Transfer"]
+    },
+    "Closing Notice": {
+        "sub_types": ["Reallocation Fees", "Amendment Fees", "Reallocation Principal"]
+    },
+    "Commitment Change": {
+        "sub_types": ["Cashless Roll", "Decrease", "Increase"]
+    },
+    "Fee Payment": {
+        "sub_types": ["Ongoing Fee", "Letter of Credit Fee"]
+    },
+    "Money Movement - Inbound": {
+        "sub_types": ["Principal", "Interest", "Principal + Interest", "Principal + Interest + Fee"]
+    },
+    "Money Movement - Outbound": {
+        "sub_types": ["Timebound", "Foreign Currency"]
+    },
+    "Loan Origination": {
+        "sub_types": ["Application Submission", "Documentation Provision", "Credit Evaluation", "Approval Notification"]
+    },
+    "Loan Disbursement": {
+        "sub_types": ["Fund Transfer", "Disbursement Schedule", "Disbursement Confirmation"]
+    },
+    "Loan Repayment": {
+        "sub_types": ["Repayment Schedule Setup", "Early Repayment", "Payment Rescheduling", "Payment Confirmation"]
+    },
+    "Loan Information": {
+        "sub_types": ["Balance Inquiry", "Amortization Schedule", "Interest Statement", "Tax Certificate"]
+    },
+    "Loan Closure": {
+        "sub_types": ["Closure Statement", "No Dues Certificate", "Security Release"]
+    },
+    "Loan Service": {
+        "sub_types": ["Statement Requests", "Document Retrieval", "Account Linking"]
+    },
+    "Loan Grievance": {
+        "sub_types": ["Dispute Resolution", "Complaint Registration", "Feedback Submission"]
+    }
+}

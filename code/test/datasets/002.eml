@@ -1,0 +1,15 @@
+Content-Type: multipart/mixed; boundary="===============3723153331148667885=="
+MIME-Version: 1.0
+From: loans@bank.com
+To: support@bank.com
+Subject: Reallocation of Principal
+
+--===============3723153331148667885==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Dear Support,
+
+We need to reallocate $10,000 from deal ID D67890 to another account. Please confirm once completed.
+--===============3723153331148667885==--

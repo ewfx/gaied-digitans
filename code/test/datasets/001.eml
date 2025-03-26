@@ -1,0 +1,28 @@
+Content-Type: multipart/mixed; boundary="===============1339475498830660246=="
+MIME-Version: 1.0
+From: finance@company.com
+To: support@bank.com
+Subject: Principal Payment Request
+
+--===============1339475498830660246==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Hello Team,
+
+Please process the principal payment of $50,000 for deal ID D12345. The funds should be applied to the outstanding balance.
+
+Attached is the transaction confirmation.
+
+Regards,
+John
+--===============1339475498830660246==
+Content-Type: application/octet-stream
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename=transaction_receipt.pdf
+
+RHVtbXkgYXR0YWNobWVudCBjb250ZW50
+
+--===============1339475498830660246==--
