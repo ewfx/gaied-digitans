@@ -25,12 +25,12 @@ The challenge is to automate email classification and data extraction using Gene
 ![Screenshot 2025-03-26 at 3 35 21 PM](https://github.com/user-attachments/assets/3e0da19b-ad98-4dc3-b3c5-0235326b27a9)
 
 
-Single Email/pdf File Classification
+   Single Email/pdf File Classification
 
 ![Screenshot 2025-03-26 at 3 35 51 PM](https://github.com/user-attachments/assets/6385a10b-bea8-4eb3-a0de-c3865a43eeaa)
 
 
-Bulk File/Folder Classification
+   Bulk File/Folder Classification
 
 ![Screenshot 2025-03-26 at 3 39 02 PM](https://github.com/user-attachments/assets/9e4e70ce-2fa3-4be8-98ed-a2ac749b8905)
 
