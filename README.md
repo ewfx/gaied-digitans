@@ -58,43 +58,48 @@ Manual email triage is time-consuming, inefficient, and prone to errors. Automat
 
 - LLM-Based Email Classification
 
-1. Using Mistral-7B-Instruct for request type classification.
+   1. Using Mistral-7B-Instruct for request type classification.
 
-2. Handling multi-intent emails with primary request detection.
+   2. Handling multi-intent emails with primary request detection.
 
    Why Mistral-7B:
 
    ✅ Balanced performance & cost (open-source, no API fees).
+   
    ✅ Great instruction following (handles structured classification well).
+   
    ✅ Fast inference (low-latency, suitable for batch processing).
+   
    ✅ Handles complex email reasoning (multi-intent detection + primary intent extraction).
+   
    ✅ Can be fine-tuned/customized for banking request types.
+   
 
 - Context-Based Data Extraction
 
-1. Using DistilBERT/Mistral-7B for extracting fields like deal name, amount, expiration date.
+   1. Using DistilBERT/Mistral-7B for extracting fields like deal name, amount, expiration date.
 
-2. Implementing priority-based extraction (email body first, numerical values from attachments).
+   2. Implementing priority-based extraction (email body first, numerical values from attachments).
 
 - OCR for Document Processing
 
-1. Using PaddleOCR for text extraction from attachments.
+   1. Using PaddleOCR for text extraction from attachments.
 
 - Duplicate Detection
 
-1. Using **hash-based exact matching** and **similarity-based soft matching**.
+   1. Using **hash-based exact matching** and **similarity-based soft matching**.
 
 - RAG for Dynamic Learning ( Future State)
 
-1. Storing request type definitions, past examples, and extraction rules in a vector database (FAISS/ChromaDB).
+   1. Storing request type definitions, past examples, and extraction rules in a vector database (FAISS/ChromaDB).
 
-2. Using hybrid retrieval + LLM classification to refine request types dynamically.
+   2. Using hybrid retrieval + LLM classification to refine request types dynamically.
 
 - Scalability & Explainability
 
-1. Batch processing for efficiency.
+   1. Batch processing for efficiency.
 
-2. Confidence scoring for classification reliability.
+   2. Confidence scoring for classification reliability.
 
 
 ## 🚧 Challenges We Faced
