@@ -14,8 +14,7 @@
 ---
 
 ## 🎯 Introduction
-Commercial Bank Lending service teams receive a high volume of servicing requests via email. These emails often contain diverse requests and attachments, which are ingested into the loan servicing platform t![Screenshot 2025-03-26 at 5 49 09 PM](https://github.com/user-attachments/assets/f7cf6eb0-1f2c-4888-b75f-8885a445bfcd)
-o create service requests (SRs). These SRs then go through workflow processing.
+Commercial Bank Lending service teams receive a high volume of servicing requests via email. These emails often contain diverse requests and attachments, which are ingested into the loan servicing platform to create service requests (SRs). These SRs then go through workflow processing.
 
 The challenge is to automate email classification and data extraction using Generative AI (LLMs), improving efficiency, accuracy, and turnaround time while minimizing manual intervention. 
 ## 🎥 Demo
