@@ -55,13 +55,46 @@ Manual email triage is time-consuming, inefficient, and prone to errors. Automat
 
 ## 🛠️ How We Built It
 
-- LLMs (Mistral-7B) for request classification & field extraction dynamically after considering rules, request types supplied
 
-- FastAPI & React for backend and frontend development.
+- LLM-Based Email Classification
 
-- Scikit-learn, Pandas, LangChain for data processing.
+1. Using Mistral-7B-Instruct for request type classification.
 
-- Duplication detection uses **hash-based exact matching** and **similarity-based soft matching**. 
+2. Handling multi-intent emails with primary request detection.
+
+   Why Mistral-7B:
+
+   ✅ Balanced performance & cost (open-source, no API fees).
+   ✅ Great instruction following (handles structured classification well).
+   ✅ Fast inference (low-latency, suitable for batch processing).
+   ✅ Handles complex email reasoning (multi-intent detection + primary intent extraction).
+   ✅ Can be fine-tuned/customized for banking request types.
+
+- Context-Based Data Extraction
+
+1. Using DistilBERT/Mistral-7B for extracting fields like deal name, amount, expiration date.
+
+2. Implementing priority-based extraction (email body first, numerical values from attachments).
+
+- OCR for Document Processing
+
+1. Using PaddleOCR for text extraction from attachments.
+
+- Duplicate Detection
+
+1. Using **hash-based exact matching** and **similarity-based soft matching**.
+
+- RAG for Dynamic Learning ( Future State)
+
+1. Storing request type definitions, past examples, and extraction rules in a vector database (FAISS/ChromaDB).
+
+2. Using hybrid retrieval + LLM classification to refine request types dynamically.
+
+- Scalability & Explainability
+
+1. Batch processing for efficiency.
+
+2. Confidence scoring for classification reliability.
 
 
 ## 🚧 Challenges We Faced
