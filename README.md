@@ -100,7 +100,9 @@ Optimizing processing time for real-time response.
 ## 🏗️ Tech Stack
 - 🔹 Frontend: React, BootStrap, HTML, CSS
 - 🔹 Backend: Python Fast API 
-- 🔹 Database: In memory
+- 🔹 Database: In memory, Chroma DB
+- 🔹 AI & NLP : Mistral-7B by Hugging Face, scikit-learn , fuzzywuzzy
+- 🔹 Document Processing  : eml-parser, paddleocr ,pdfplumber,python-docx
 - 
 
 ## 👥 Team
